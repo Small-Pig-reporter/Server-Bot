@@ -1,0 +1,39 @@
+module.exports = {
+ name: "ticket-setup",
+ code: `
+ $awaitMessages[$authorID;30s;everything;tsp2;Command has been cancelled]
+ $sendMessage[Which Category Do you want to make For Ticket System.
+ ProvideProvide the Category ID.
+ (Category should be invisible for everyone Except Staffs). 
+ This Command will be cancelled after \`30 seconds\`.;no]
+ $onlyPerms[admin;Only Users with \`ADMIN\` perms can use this]
+ `
+};
+
+bot.awaitedCommand({
+ name: "tsp2",
+ code: `
+ $awaitMessages[$authorID;10m;everything;tsp3;Command is cancelled]
+ $sendMessage[{description:$channelName[$message] has been set.Please Provide the Ticket Message.
+ Format:
+ *Message When no subject is Provided|Message In Ticket|Message to User in The Channel \`!ticket\` is used* 
+ 
+ (note: don't use **|** anywhere else in Your message except the seperator.
+ Embed response can be set using the same format used by \`!say\`
+ \`(subject)\` allow To show the subject for which the ticket is opened.)}
+ 
+ {footer:This command will be Cancelled after 10 mins. If you default message then use \`skip\` };no]
+ 
+ $setServerVar[ticketChan;$message]
+ $onlyIf[$channelExists[$message]==true;Provided Category Doesn't Exist]
+ $onlyIf[$isNumber[$message]==true;Please provide Category ID. If you don't know how to get category IID use \`!guide\`]
+ `
+});
+
+bot.awaitedCommand({
+ name: "tsp3",
+ code: `
+ $setServerVar[ticket;$message]
+ Setup COMPLETED.
+ `
+});
