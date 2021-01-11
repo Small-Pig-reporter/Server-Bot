@@ -1,0 +1,6 @@
+bot.command({
+name: "kick",
+code: ` $description[user $mentioned[1] has been kicked out the server]
+$kick[$mentioned[1]]
+$onlyPerms[kick;admin only]
+})
