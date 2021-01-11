@@ -1,0 +1,15 @@
+Unban:
+bot.command({
+ name: "unban",
+ code: `
+ 
+$unban[$message[1];By $userTag[$authorID] Reason: $sliceMessage[1]]
+$username[$message[1]] Has Been Unbanned!
+$onlyBotPerms[ban;I need ban permission to unban this user]
+$onlyIf[$isBanned[$message[1]]==true;User Is Not Banned]
+$argsCheck[>1;Please Provide User ID To Unban!]
+
+
+$onlyPerms[ban;You need ban permission]`
+});
+ 
