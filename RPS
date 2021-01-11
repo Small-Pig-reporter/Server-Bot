@@ -1,0 +1,36 @@
+bot.command({
+name: "rps",
+code: `$awaitMessages[$authorID;10s;rock,paper,scissor;rock,paper,scissor;You ran out of time]
+Rock Paper Scissors!
+Choose an option.
+\`rock\` / \`paper\` / \`scissor\`
+$deleteIn[10s]
+`})
+
+bot.awaitedCommand({
+name: "rock",
+code: `
+$randomText[
+:rpsTie:│I chose \`rock\` too, it's a tie.;
+:rpsLost:│I chose \`paper\`, you lost.;
+:rpsWon:│I chose \`scissors\`, you won.]
+$randomText[Well Played!;Good Game!]
+`})
+
+bot.awaitedCommand({
+name: "paper",
+code: `$randomText[
+:rpsWon:│I chose \`rock\`, you won.;
+:rpsTie:│I chose \`paper\` too, it's a tie.;
+:rpsLost:│I chose \`scissors\`, you lost.]
+$randomText[Well Played!;Good Game!]
+`})
+
+bot.awaitedCommand({
+name: "scissor",
+code: `$randomText[
+:rpsLost:│I chose \`rock\`, you lost.;
+:rpsWon:│I chose \`paper\`, you won.;
+:rpsTie:│I chose \`scissors\` too, it's a tie.]
+$randomText[Well Played!;Good Game!]
+`})
