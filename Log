@@ -1,0 +1,23 @@
+bot.botJoinCommand({
+ channel: logChannel,
+ code: `$title[$username[$clientID] Joined A New Server!] 
+$description[Guild Owner: $username[$ownerID]#$discriminator[$ownerID]
+Guild Name: $serverName
+Guild Id: $guildID
+Members: $membersCount
+invite: $getServerInvite
+] $color[RED]`
+})
+bot.onGuildJoin()
+
+bot.botLeaveCommand({
+ channel: logChannel,
+ code: `$title[$username[$clientID] left A Server :(] 
+$description[Guild Owner: $username[$ownerID]#$discriminator[$ownerID]
+Guild Name: $serverName
+Guild Id: $guildID
+Members: $membersCount
+invite: $getServerInvite
+] $color[RED]`
+})
+bot.onGuildLeave()
