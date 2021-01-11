@@ -1,0 +1,12 @@
+Ban: 
+bot.command({
+name: "ban",
+code: `
+
+$ban[$findUser[$message[1]];By $userTag[$authorID] Reason: $sliceMessage[1];7]
+$username[$findUser[$message[1]]] Has Been Banned!
+$onlyBotPerms[ban;I need ban permission ]
+$onlyIf[$findUser[$message[1]]!=$authorID;Please give me user ID or mention someone]
+$onlyPerms[ban;You need ban permission]
+`
+})
