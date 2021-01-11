@@ -1,0 +1,4 @@
+bot.command({
+name: "SBwiki server",
+code: Hi ! U can create a page of this server at a wiki named Discord Server wiki. This is a special wiki for Server Bot server. https://discord-server-list.fandom.com/wiki/Discord_Server_Wiki . U can introduce your server there. 
+})
