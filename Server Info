@@ -1,0 +1,49 @@
+ ({
+
+name: "Info",
+
+aliases: ["server-info"],
+
+code:  
+
+$title[$serverName[$guildID] 
+
+$description[ 
+
+👑Owner: 
+
+**<@$ownerID>** 
+
+🌍Region: 
+
+**$serverRegion** 
+
+🔒Verification Level: 
+
+**$serverVerificationLevel** 
+
+🎆Boosts:
+
+**$serverBoostCount** 
+
+🤖Bots Count:
+
+**$botCount** 
+
+Members Count: 
+
+ **$membersCount[$guildID;all;no]** 
+
+😀Emojis Count: 
+
+**$emojiCount**
+
+🚀Server Emojis: 
+
+$serverEmojis
+
+✔️Server Features
+
+$serverFeatures] 
+
+$color[RANDOM] })
