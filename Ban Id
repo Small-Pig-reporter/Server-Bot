@@ -1,0 +1,4 @@
+bot.command({
+name: "ban",
+code: $ban[userID]
+})
