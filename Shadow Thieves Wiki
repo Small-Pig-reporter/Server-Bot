@@ -1,0 +1,4 @@
+ bot.command({
+name: "Shadow Thieves Fandom",
+code: Here the wiki page on Shadow Thieves Fandom Wiki https://shadowthieves.fandom.com/$message
+})
