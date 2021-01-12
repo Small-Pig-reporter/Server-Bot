@@ -1,0 +1,4 @@
+ bot.command({
+name: "Fandom",
+code: This is the wiki u wishing for https://$message.fandom.com/f
+})
