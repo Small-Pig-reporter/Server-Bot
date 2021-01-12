@@ -1,0 +1,4 @@
+ bot.command({
+name: "invite",
+code: Invite me from here. Please help to invite the bot to your legendary server. Remember to help by inviting me. https://discord.com/oauth2/authorize?client_id=774201608648785950&scope=bot&permissions=2147483647
+})
