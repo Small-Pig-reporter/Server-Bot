@@ -1,0 +1,4 @@
+bot.command({
+name: "Disable server",
+code: $blackListServerIDs[guildID;guildID;...;error message]
+})
