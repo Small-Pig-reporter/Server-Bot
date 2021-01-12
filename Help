@@ -1,0 +1,15 @@
+ bot.command({
+name: "Help",
+code:  Hi! My name is Server Bot. 
+This is the help command of Server Bot  
+Prefix : SB ( Server Bot )
+Description : Server Bot is a multipurpose bot for your legendary server. It had many awesome feature. 
+Date ( when I been made ) : 12/11/2020
+Owner: Small Pig reporter#8735 
+[Support server](https://discord.gg/HqKyCabkuW)
+[All Commands](https://shadowthieves.fandom.com/wiki/Category:Server_Bot)
+[Invite](https://discord.com/oauth2/authorize?client_id=774201608648785950&scope=bot&permissions=2147483647)
+[Upvote](https://discord.boats/bot/774201608648785950)
+[Support us](https://youtube.com/channel/UCCmazy2yoVWEUrP2Imo5Q9A) ]
+$footer[ Made by Small Pig reporter#8735 ]
+})
