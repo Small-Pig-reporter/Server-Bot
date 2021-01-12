@@ -1,0 +1,6 @@
+bot.command({
+name:"server-list",
+code:`
+$djsEval[ d.client.guilds.cache.map(g=>g.name).join('\n')]
+`
+})
