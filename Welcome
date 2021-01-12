@@ -1,0 +1,9 @@
+bot.joinCommand({
+channel: "CHANNELID",
+code: `
+$title[A Member Joined!]
+$description[ Welcome <@$authorID> to the Server! Wish u have a good time here. ]
+$color[FF00FF]
+`
+})
+bot.onJoined()
