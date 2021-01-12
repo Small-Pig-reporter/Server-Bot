@@ -1,0 +1,12 @@
+module.exports = ({
+name: "mute",
+code: `
+$sendDM[$mentioned[1];{description:Your mute time has finished in $serverName[$guildID]}{color:BLUE}]
+$takeRoles[$mentioned[1];$getServerVar[mute]]
+$wait[$message[2]]
+$channelSendMessage[$channelID;Muted <@$mentioned[1]> for $message[2]]
+$giveRoles[$mentioned[1];$getServerVar[mute]]
+$onlyIf[$message[2]==true;Please give me how much time i need to mute]
+$onlyPerms[manageserver;You need manage server permission]
+`
+});
