@@ -1,0 +1,11 @@
+module.exports = ({
+ name: "purge",
+ code: `
+
+$deletecommand
+$clear[$message]
+$cooldown[15s;**Too Quick there Bud, Try again in please wait %time% to Purge again**]
+$onlyPerms[admin;**Only Admin Can Use This**🙂]
+$argsCheck[>1;**Put How Many Messages you want to Purge🙂**]
+$onlyIf[$isNumber[$message]==true;**Access Denied😐 Type Numbers Not Messages😪**]`
+});
